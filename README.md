@@ -1,1 +1,2 @@
-# Logica-javaScript
+# Logica-javaScript 
+# 1ª Passos com a linguagem!
