@@ -1,0 +1,57 @@
+<meta charset="UTF-8">
+
+<h1>Receitas do Yan</h1>
+
+<!--<script>
+    var ingredientes = [];
+
+    var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+
+    var contador = 1;
+
+    while( contador <= quantidade) {
+
+        var ingrediente = prompt("Informe o ingrediente " + contador);
+
+        ingredientes.push(ingrediente);
+
+        contador++;
+    }
+
+    console.log(ingredientes);
+</script>-->
+
+<script>
+    var ingredientes = [];
+
+    var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar?"));
+
+    var contador = 1;
+
+    while( contador <= quantidade) {
+
+        var ingrediente = prompt("Informe o ingrediente " + contador);
+
+        var existe = false;
+
+        for( var posicao = 0; posicao < ingredientes.length; posicao++) {
+
+        	//condição que verifica se o ingredientes são igual se for sai do "For" com o comando "break"
+            if( ingredientes[posicao] == ingrediente) {
+
+                existe = true;
+                break;
+            }
+        }
+        //Agora olhe o próximo if. Ele verifica o valor da variável existe. Se ele for true, quer dizer que o ingrediente já existe, então, ele não executa a instrução dentro do if que é justamente colocar esse ingrediente dentro do array.
+
+        //Se a variável existe possuir o valor false quer dizer que o ingrediente não foi encontrado no array, então ele é adicionado e o contador é incrementado.
+        if( existe == false) {
+
+            ingredientes.push(ingrediente);
+            contador++;
+        }
+    }
+
+    document.write(ingredientes);
+</script>
